@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minnal Runner</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap"><div id="stage">
+<canvas id="c" width="720" height="1280"></canvas>
+<div class="hud"><span class="chip" id="coins">🪙 0</span><span class="chip" id="lvl">Lv 1</span><div id="bar"><div id="fill"></div></div><span class="chip" id="snd" style="pointer-events:auto">🔊</span><span class="chip" id="exit" style="pointer-events:auto;background:#ff3345">✖ Exit</span></div>
+<div id="pw"></div>
+<div class="ov show" id="menu">
+<h1><span class="ln t1">MINNAL</span><svg class="emb" viewBox="0 0 100 100" aria-label="Lightning emblem"><defs><linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#ffa51f"/><stop offset="1" stop-color="#a84f00"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="#2a1200" stroke="url(#gd)" stroke-width="6"/><circle cx="50" cy="50" r="35" fill="none" stroke="url(#gd)" stroke-width="2.5"/><path d="M60 12 L30 55 H48 L40 90 L72 44 H54 Z" fill="url(#gd)" stroke="#fff1c2" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="ln t2">RUNNER</span></h1>
+<p>Run through Kerala, grab coins, use your powers.</p>
+<p id="stats"></p>
+<button class="btn" id="play">Play</button>
+<button class="btn alt" id="openShop">Shop</button>
+<button class="btn alt" id="quit">Exit</button>
+<p>Swipe or use arrow keys to change lanes. Keys 1 to 4 use powers. Zap is lightning!</p>
+</div>
+<div class="ov" id="over">
+<h2>Wipe out!</h2>
+<p id="res"></p>
+<button class="btn" id="again">Run again</button>
+<button class="btn alt" id="overShop">Shop</button>
+<button class="btn alt" id="overMenu">Exit to menu</button>
+</div>
+<div class="ov" id="bye"><h2>Thanks for playing!</h2><p>Come back soon, hero.</p><button class="btn" id="back">Back to menu</button></div>
+<div class="ov" id="shop">
+<h2>Shop</h2>
+<p id="shopCoins"></p>
+<div id="shopList" style="display:flex;flex-direction:column;gap:8px;align-items:center;width:100%"></div>
+<button class="btn alt" id="closeShop">Back</button>
+</div>
+</div></div>
+<!-- ===== BACKGROUND MUSIC (BGM) SPACE =====
+     1. Put your own music file in the SAME folder as this file.
+     2. Name it bgm.mp3  (or change the name in src below).
+     3. Only use music you have the right to use.
+     If the file is missing, the game plays its own built-in music. -->
+<audio id="bgm" src="minnal_murali_bgm.mp3" loop preload="auto"></audio>
+<script src="game.js"></script>
+</body>
+</html>
